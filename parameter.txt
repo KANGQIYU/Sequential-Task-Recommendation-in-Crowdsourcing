@@ -1,0 +1,12 @@
+ARM 2:
+URC:
+GRC:
+
+ARM 7:
+
+
+ARM 30
+URC:
+GRC: \alpha = 0.01, C = 
+
+ARM100

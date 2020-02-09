@@ -1,0 +1,29 @@
+clear all
+%global alphaGRC;
+global alphaURC;
+%global C; C = 0.1;
+warning off all
+mkdir('.\common_setting');
+settingpath = '.\common_setting\1.mat';
+
+%common_setting(settingpath);
+aaaaa = [0.01 0.1 1 10 100];
+for alpha = aaaaa
+    alphaURC = alpha;
+ savedatapath = ['.\result\ChangeAlpha\D1\URC\'  num2str(alpha)];
+%savedatapath = ['.\result\ChangeAlpha\D3\URC\'  num2str(alpha)];
+%savedatapath = ['.\result\ChangeAlpha\D4\URC\'  num2str(alpha)];
+%savedatapath = ['.\result\ChangeAlpha\D6\URC\'  num2str(alpha)];
+
+for i = 1:1000
+    %UCBC(settingpath,savedatapath,i); NOT USE
+    
+    %GRC(settingpath,savedatapath,i);
+    URC(settingpath,savedatapath,i);
+    %NAIVE(settingpath,savedatapath,i);
+end
+
+end
+
+
+%DRAW;
